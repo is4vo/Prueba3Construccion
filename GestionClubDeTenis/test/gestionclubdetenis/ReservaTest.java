@@ -43,12 +43,10 @@ public class ReservaTest {
     @Test
     public void testCalcularCosto() {
         System.out.println("calcularCosto");
-        Reserva instance = new Reserva();
-        int expResult = 0;
+        Reserva instance = new Reserva ("Lunes", "17:00", null, 0);
+        int expResult = 5000;
         int result = instance.calcularCosto();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,12 +55,11 @@ public class ReservaTest {
     @Test
     public void testGetCliente() {
         System.out.println("getCliente");
-        Reserva instance = new Reserva();
-        Cliente expResult = null;
+        Cliente cliente = new Cliente ("12345678-9");
+        Reserva instance = new Reserva (null, null, cliente, 0);
+        Cliente expResult = cliente;
         Cliente result = instance.getCliente();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,11 +68,12 @@ public class ReservaTest {
     @Test
     public void testSetCliente() {
         System.out.println("setCliente");
-        Cliente cliente = null;
-        Reserva instance = new Reserva();
+        Cliente cliente = new Cliente ("12345678-9");
+        Reserva instance = new Reserva(null, null, null, 0);
         instance.setCliente(cliente);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Cliente expResult = cliente;
+        Cliente result = instance.getCliente();
+        assertEquals(expResult, result);
     }
 
     /**
@@ -84,12 +82,10 @@ public class ReservaTest {
     @Test
     public void testGetHorario() {
         System.out.println("getHorario");
-        Reserva instance = new Reserva();
-        String expResult = "";
+        Reserva instance = new Reserva(null, "16:00", null, 0);
+        String expResult = "16:00";
         String result = instance.getHorario();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,11 +94,11 @@ public class ReservaTest {
     @Test
     public void testSetHorario() {
         System.out.println("setHorario");
-        String horario = "";
-        Reserva instance = new Reserva();
+        String horario = "16:00";
+        Reserva instance = new Reserva(null,null,null,0);
         instance.setHorario(horario);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = instance.getHorario();
+        assertEquals(horario, result);
     }
 
     /**
@@ -111,12 +107,10 @@ public class ReservaTest {
     @Test
     public void testGetCosto() {
         System.out.println("getCosto");
-        Reserva instance = new Reserva();
-        int expResult = 0;
+        Reserva instance = new Reserva("Lunes","17:00",null,0);
+        int expResult = 5000;
         int result = instance.getCosto();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -125,11 +119,11 @@ public class ReservaTest {
     @Test
     public void testSetCosto() {
         System.out.println("setCosto");
-        int costo = 0;
-        Reserva instance = new Reserva();
+        int costo = 5000;
+        Reserva instance = new Reserva(null,null,null,0);
         instance.setCosto(costo);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = instance.getCosto();
+        assertEquals(costo,result);
     }
 
     /**
@@ -138,12 +132,11 @@ public class ReservaTest {
     @Test
     public void testGetPista() {
         System.out.println("getPista");
-        Reserva instance = new Reserva();
-        int expResult = 0;
+        Reserva instance = new Reserva(null,null,null,1);
+        int expResult = 1;
         int result = instance.getPista();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -152,11 +145,11 @@ public class ReservaTest {
     @Test
     public void testSetPista() {
         System.out.println("setPista");
-        int pista = 0;
-        Reserva instance = new Reserva();
+        int pista = 1;
+        Reserva instance = new Reserva(null,null,null,0);
         instance.setPista(pista);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int result = instance.getPista();
+        assertEquals(pista, result);
     }
     
 }

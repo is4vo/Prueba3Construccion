@@ -6,13 +6,18 @@ package gestionclubdetenis;
 public class Reserva {
     private Cliente cliente;
     private String horario;
+    private String dia;
     private int costo;
     private int pista;
 
     /**
      * 
+     * @param dia
+     * @param horario
+     * @param cliente
+     * @param pista
      */
-    public Reserva() {
+    public Reserva(String dia, String horario, Cliente cliente, int pista) {
     }
 
     /**
