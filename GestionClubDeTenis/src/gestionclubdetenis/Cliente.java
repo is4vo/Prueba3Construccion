@@ -6,6 +6,7 @@ package gestionclubdetenis;
 public class Cliente {
     private String rut;
     private int multa;
+    private boolean mensualidadPagada;
     private final int mensualidad = 35000;
 
     /**
@@ -41,6 +42,14 @@ public class Cliente {
 
     public void setMulta(int multa) {
         this.multa = multa;
+    }
+
+    public boolean isMensualidadPagada() {
+        return mensualidadPagada;
+    }
+
+    public void setMensualidadPagada(boolean mensualidadPagada) {
+        this.mensualidadPagada = mensualidadPagada;
     }
     
     

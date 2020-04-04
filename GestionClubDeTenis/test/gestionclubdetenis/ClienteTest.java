@@ -43,11 +43,13 @@ public class ClienteTest {
     @Test
     public void testAnadirMulta() {
         System.out.println("anadirMulta");
-        int multa = 0;
         Cliente instance = new Cliente();
+        int multa = 100;
+        instance.setMulta(100); //multa anterior
         instance.anadirMulta(multa);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        int resultadoEsperado = 200;
+        int resultadoObtenido = instance.getMulta();
+        assertEquals(resultadoEsperado,resultadoObtenido);
     }
 
     /**
@@ -58,8 +60,11 @@ public class ClienteTest {
         System.out.println("pagarDeuda");
         Cliente instance = new Cliente();
         instance.pagarDeuda();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        boolean pagada = instance.isMensualidadPagada();
+        int resultadoEsperado = 0;
+        int resultadoObtenido = instance.getMulta();
+        assertEquals(resultadoEsperado, resultadoObtenido);
+        assertTrue(pagada);
     }
 
     /**
@@ -68,12 +73,10 @@ public class ClienteTest {
     @Test
     public void testGetRut() {
         System.out.println("getRut");
-        Cliente instance = new Cliente();
-        String expResult = "";
-        String result = instance.getRut();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        Cliente instance = new Cliente("12345678-9");
+        String resultadoEsperado = "12345678-9";
+        String resultadoObtenido = instance.getRut();
+        assertEquals(resultadoEsperado, resultadoObtenido);
     }
 
     /**
@@ -82,11 +85,12 @@ public class ClienteTest {
     @Test
     public void testSetRut() {
         System.out.println("setRut");
-        String rut = "";
         Cliente instance = new Cliente();
-        instance.setRut(rut);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setRut("12345678-9");
+        String resultadoEsperado = "12345678-9";
+        String resultadoObtenido = instance.getRut();
+        assertEquals(resultadoEsperado, resultadoObtenido);
+        
     }
 
     /**
@@ -96,11 +100,11 @@ public class ClienteTest {
     public void testGetMulta() {
         System.out.println("getMulta");
         Cliente instance = new Cliente();
-        int expResult = 0;
-        int result = instance.getMulta();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setMulta(100);
+        int resultadoEsperado = 100;
+        int resultadoObtenido = instance.getMulta();
+        assertEquals(resultadoEsperado, resultadoObtenido);
+        
     }
 
     /**
@@ -109,11 +113,35 @@ public class ClienteTest {
     @Test
     public void testSetMulta() {
         System.out.println("setMulta");
-        int multa = 0;
         Cliente instance = new Cliente();
-        instance.setMulta(multa);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.setMulta(100);
+        int resultadoEsperado = 100;
+        int resultadoObtenido = instance.getMulta();
+        assertEquals(resultadoEsperado, resultadoObtenido);
+    }
+
+    /**
+     * Test of isMensualidadPagada method, of class Cliente.
+     */
+    @Test
+    public void testIsMensualidadPagada() {
+        System.out.println("isMensualidadPagada");
+        Cliente instance = new Cliente();
+        instance.setMensualidadPagada(true);
+        boolean resultadoObtenido = instance.isMensualidadPagada();
+        assertTrue(resultadoObtenido);
+    }
+
+    /**
+     * Test of setMensualidadPagada method, of class Cliente.
+     */
+    @Test
+    public void testSetMensualidadPagada() {
+        System.out.println("setMensualidadPagada");
+        Cliente instance = new Cliente();
+        instance.setMensualidadPagada(false);
+        boolean resultadoObtenido = instance.isMensualidadPagada();
+        assertFalse(resultadoObtenido);
     }
     
 }
