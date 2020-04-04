@@ -27,4 +27,22 @@ public class Cliente {
     public void pagarDeuda() {
     }
 
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public int getMulta() {
+        return multa;
+    }
+
+    public void setMulta(int multa) {
+        this.multa = multa;
+    }
+    
+    
+
 }

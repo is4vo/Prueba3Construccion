@@ -61,5 +61,59 @@ public class ClienteTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+
+    /**
+     * Test of getRut method, of class Cliente.
+     */
+    @Test
+    public void testGetRut() {
+        System.out.println("getRut");
+        Cliente instance = new Cliente();
+        String expResult = "";
+        String result = instance.getRut();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setRut method, of class Cliente.
+     */
+    @Test
+    public void testSetRut() {
+        System.out.println("setRut");
+        String rut = "";
+        Cliente instance = new Cliente();
+        instance.setRut(rut);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getMulta method, of class Cliente.
+     */
+    @Test
+    public void testGetMulta() {
+        System.out.println("getMulta");
+        Cliente instance = new Cliente();
+        int expResult = 0;
+        int result = instance.getMulta();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setMulta method, of class Cliente.
+     */
+    @Test
+    public void testSetMulta() {
+        System.out.println("setMulta");
+        int multa = 0;
+        Cliente instance = new Cliente();
+        instance.setMulta(multa);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

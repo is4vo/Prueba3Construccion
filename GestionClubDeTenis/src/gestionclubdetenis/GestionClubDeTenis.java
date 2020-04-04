@@ -49,4 +49,22 @@ public class GestionClubDeTenis {
         return false;
     }
 
+    public ArrayList<Reserva> getReservasRealizadas() {
+        return reservasRealizadas;
+    }
+
+    public void setReservasRealizadas(ArrayList<Reserva> reservasRealizadas) {
+        this.reservasRealizadas = reservasRealizadas;
+    }
+
+    public ArrayList<Cliente> getSociosRegistrados() {
+        return sociosRegistrados;
+    }
+
+    public void setSociosRegistrados(ArrayList<Cliente> sociosRegistrados) {
+        this.sociosRegistrados = sociosRegistrados;
+    }
+    
+    
+
 }

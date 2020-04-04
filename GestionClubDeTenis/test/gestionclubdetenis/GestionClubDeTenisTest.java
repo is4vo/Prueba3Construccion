@@ -5,6 +5,7 @@
  */
 package gestionclubdetenis;
 
+import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -88,6 +89,60 @@ public class GestionClubDeTenisTest {
         boolean expResult = false;
         boolean result = instance.verificarDisponibilidad(pista, horario);
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getReservasRealizadas method, of class GestionClubDeTenis.
+     */
+    @Test
+    public void testGetReservasRealizadas() {
+        System.out.println("getReservasRealizadas");
+        GestionClubDeTenis instance = new GestionClubDeTenis();
+        ArrayList<Reserva> expResult = null;
+        ArrayList<Reserva> result = instance.getReservasRealizadas();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setReservasRealizadas method, of class GestionClubDeTenis.
+     */
+    @Test
+    public void testSetReservasRealizadas() {
+        System.out.println("setReservasRealizadas");
+        ArrayList<Reserva> reservasRealizadas = null;
+        GestionClubDeTenis instance = new GestionClubDeTenis();
+        instance.setReservasRealizadas(reservasRealizadas);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getSociosRegistrados method, of class GestionClubDeTenis.
+     */
+    @Test
+    public void testGetSociosRegistrados() {
+        System.out.println("getSociosRegistrados");
+        GestionClubDeTenis instance = new GestionClubDeTenis();
+        ArrayList<Cliente> expResult = null;
+        ArrayList<Cliente> result = instance.getSociosRegistrados();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setSociosRegistrados method, of class GestionClubDeTenis.
+     */
+    @Test
+    public void testSetSociosRegistrados() {
+        System.out.println("setSociosRegistrados");
+        ArrayList<Cliente> sociosRegistrados = null;
+        GestionClubDeTenis instance = new GestionClubDeTenis();
+        instance.setSociosRegistrados(sociosRegistrados);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

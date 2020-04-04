@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author isavo
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({gestionclubdetenis.ReservaTest.class, gestionclubdetenis.GestionClubDeTenisTest.class, gestionclubdetenis.ClienteTest.class})
+@Suite.SuiteClasses({ClienteTest.class, GestionClubDeTenisTest.class, ReservaTest.class})
 public class GestionclubdetenisSuite {
 
     @BeforeClass
