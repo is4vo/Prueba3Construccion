@@ -43,7 +43,7 @@ public class ClienteTest {
     @Test
     public void testAnadirMulta() {
         System.out.println("anadirMulta");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         int multa = 100;
         instance.setMulta(100); //multa anterior
         instance.anadirMulta(multa);
@@ -58,7 +58,7 @@ public class ClienteTest {
     @Test
     public void testPagarDeuda() {
         System.out.println("pagarDeuda");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.pagarDeuda();
         boolean pagada = instance.isMensualidadPagada();
         int resultadoEsperado = 0;
@@ -85,7 +85,7 @@ public class ClienteTest {
     @Test
     public void testSetRut() {
         System.out.println("setRut");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.setRut("12345678-9");
         String resultadoEsperado = "12345678-9";
         String resultadoObtenido = instance.getRut();
@@ -99,7 +99,7 @@ public class ClienteTest {
     @Test
     public void testGetMulta() {
         System.out.println("getMulta");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.setMulta(100);
         int resultadoEsperado = 100;
         int resultadoObtenido = instance.getMulta();
@@ -113,7 +113,7 @@ public class ClienteTest {
     @Test
     public void testSetMulta() {
         System.out.println("setMulta");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.setMulta(100);
         int resultadoEsperado = 100;
         int resultadoObtenido = instance.getMulta();
@@ -126,7 +126,7 @@ public class ClienteTest {
     @Test
     public void testIsMensualidadPagada() {
         System.out.println("isMensualidadPagada");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.setMensualidadPagada(true);
         boolean resultadoObtenido = instance.isMensualidadPagada();
         assertTrue(resultadoObtenido);
@@ -138,7 +138,7 @@ public class ClienteTest {
     @Test
     public void testSetMensualidadPagada() {
         System.out.println("setMensualidadPagada");
-        Cliente instance = new Cliente();
+        Cliente instance = new Cliente(null);
         instance.setMensualidadPagada(false);
         boolean resultadoObtenido = instance.isMensualidadPagada();
         assertFalse(resultadoObtenido);
