@@ -60,11 +60,9 @@ public class ClienteTest {
         System.out.println("pagarDeuda");
         Cliente instance = new Cliente(null);
         instance.pagarDeuda();
-        boolean pagada = instance.isMensualidadPagada();
         int resultadoEsperado = 0;
         int resultadoObtenido = instance.getMulta();
         assertEquals(resultadoEsperado, resultadoObtenido);
-        assertTrue(pagada);
     }
 
     /**
