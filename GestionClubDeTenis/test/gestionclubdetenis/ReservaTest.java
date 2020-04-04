@@ -56,7 +56,7 @@ public class ReservaTest {
     public void testGetCliente() {
         System.out.println("getCliente");
         Cliente cliente = new Cliente ("12345678-9");
-        Reserva instance = new Reserva (null, null, cliente, 0);
+        Reserva instance = new Reserva("test","test",cliente,1);
         Cliente expResult = cliente;
         Cliente result = instance.getCliente();
         assertEquals(expResult, result);
@@ -69,7 +69,7 @@ public class ReservaTest {
     public void testSetCliente() {
         System.out.println("setCliente");
         Cliente cliente = new Cliente ("12345678-9");
-        Reserva instance = new Reserva(null, null, null, 0);
+        Reserva instance = new Reserva("test","test",null,1);
         instance.setCliente(cliente);
         Cliente expResult = cliente;
         Cliente result = instance.getCliente();
@@ -82,7 +82,7 @@ public class ReservaTest {
     @Test
     public void testGetHorario() {
         System.out.println("getHorario");
-        Reserva instance = new Reserva(null, "16:00", null, 0);
+        Reserva instance = new Reserva("test", "16:00", null, 0);
         String expResult = "16:00";
         String result = instance.getHorario();
         assertEquals(expResult, result);
@@ -95,7 +95,7 @@ public class ReservaTest {
     public void testSetHorario() {
         System.out.println("setHorario");
         String horario = "16:00";
-        Reserva instance = new Reserva(null,null,null,0);
+        Reserva instance = new Reserva("test","test",null,1);
         instance.setHorario(horario);
         String result = instance.getHorario();
         assertEquals(horario, result);
@@ -120,7 +120,7 @@ public class ReservaTest {
     public void testSetCosto() {
         System.out.println("setCosto");
         int costo = 5000;
-        Reserva instance = new Reserva(null,null,null,0);
+        Reserva instance = new Reserva("test","test",null,1);
         instance.setCosto(costo);
         int result = instance.getCosto();
         assertEquals(costo,result);
@@ -132,7 +132,7 @@ public class ReservaTest {
     @Test
     public void testGetPista() {
         System.out.println("getPista");
-        Reserva instance = new Reserva(null,null,null,1);
+        Reserva instance = new Reserva("test","test",null,1);
         int expResult = 1;
         int result = instance.getPista();
         assertEquals(expResult, result);
@@ -146,7 +146,7 @@ public class ReservaTest {
     public void testSetPista() {
         System.out.println("setPista");
         int pista = 1;
-        Reserva instance = new Reserva(null,null,null,0);
+        Reserva instance = new Reserva("test","test",null,0);
         instance.setPista(pista);
         int result = instance.getPista();
         assertEquals(pista, result);
