@@ -46,8 +46,7 @@ public class GestionClubDeTenisTest {
         System.out.println("main");
         String[] args = null;
         GestionClubDeTenis.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,8 +57,7 @@ public class GestionClubDeTenisTest {
         System.out.println("menu");
         GestionClubDeTenis instance = new GestionClubDeTenis();
         instance.menu();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //Metodo que solo imprime asi que no puede probarse
     }
 
     /**
@@ -68,13 +66,11 @@ public class GestionClubDeTenisTest {
     @Test
     public void testConfirmarIdentidad() {
         System.out.println("confirmarIdentidad");
-        String confirmacion = "";
+        String confirmacion = "No";
         GestionClubDeTenis instance = new GestionClubDeTenis();
         boolean expResult = false;
         boolean result = instance.confirmarIdentidad(confirmacion);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -83,14 +79,13 @@ public class GestionClubDeTenisTest {
     @Test
     public void testVerificarDisponibilidad() {
         System.out.println("verificarDisponibilidad");
-        int pista = 0;
-        String horario = "";
+        int pista = 1;
+        String horario = "17:00";
+        String dia = "Martes";
         GestionClubDeTenis instance = new GestionClubDeTenis();
         boolean expResult = false;
-        boolean result = instance.verificarDisponibilidad(pista, horario);
+        boolean result = instance.verificarDisponibilidad(pista, horario, dia);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -103,8 +98,6 @@ public class GestionClubDeTenisTest {
         ArrayList<Reserva> expResult = null;
         ArrayList<Reserva> result = instance.getReservasRealizadas();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -116,8 +109,8 @@ public class GestionClubDeTenisTest {
         ArrayList<Reserva> reservasRealizadas = null;
         GestionClubDeTenis instance = new GestionClubDeTenis();
         instance.setReservasRealizadas(reservasRealizadas);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Reserva> resultado = instance.getReservasRealizadas();
+        assertEquals(reservasRealizadas, resultado);
     }
 
     /**
@@ -130,8 +123,6 @@ public class GestionClubDeTenisTest {
         ArrayList<Cliente> expResult = null;
         ArrayList<Cliente> result = instance.getSociosRegistrados();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -143,8 +134,8 @@ public class GestionClubDeTenisTest {
         ArrayList<Cliente> sociosRegistrados = null;
         GestionClubDeTenis instance = new GestionClubDeTenis();
         instance.setSociosRegistrados(sociosRegistrados);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        ArrayList<Cliente> resultado = instance.getSociosRegistrados();
+        assertEquals(sociosRegistrados, resultado);
     }
     
 }
