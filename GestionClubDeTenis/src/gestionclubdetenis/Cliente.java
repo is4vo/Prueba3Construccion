@@ -11,8 +11,12 @@ public class Cliente {
 
     /**
      * 
+     * @param rut
      */
-    public Cliente() {
+    public Cliente(String rut) {
+        this.rut = rut;
+        this.multa = 0;
+        this.mensualidadPagada = false;
     }
 
     /**
@@ -20,12 +24,14 @@ public class Cliente {
      * @param multa
      */
     public void anadirMulta(int multa) {
+        this.multa += multa;
     }
 
     /**
      *
      */
     public void pagarDeuda() {
+        multa = 0;
     }
 
     public String getRut() {
