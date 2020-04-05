@@ -79,11 +79,12 @@ public class GestionClubDeTenisTest {
     @Test
     public void testVerificarDisponibilidad() {
         System.out.println("verificarDisponibilidad");
+        
         int pista = 1;
         String horario = "17:00";
         String dia = "Martes";
         GestionClubDeTenis instance = new GestionClubDeTenis();
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.verificarDisponibilidad(pista, horario, dia);
         assertEquals(expResult, result);
     }
@@ -95,7 +96,7 @@ public class GestionClubDeTenisTest {
     public void testGetReservasRealizadas() {
         System.out.println("getReservasRealizadas");
         GestionClubDeTenis instance = new GestionClubDeTenis();
-        ArrayList<Reserva> expResult = null;
+        ArrayList<Reserva> expResult = new ArrayList<>();
         ArrayList<Reserva> result = instance.getReservasRealizadas();
         assertEquals(expResult, result);
     }
@@ -120,7 +121,7 @@ public class GestionClubDeTenisTest {
     public void testGetSociosRegistrados() {
         System.out.println("getSociosRegistrados");
         GestionClubDeTenis instance = new GestionClubDeTenis();
-        ArrayList<Cliente> expResult = null;
+        ArrayList<Cliente> expResult = new ArrayList<>();
         ArrayList<Cliente> result = instance.getSociosRegistrados();
         assertEquals(expResult, result);
     }
