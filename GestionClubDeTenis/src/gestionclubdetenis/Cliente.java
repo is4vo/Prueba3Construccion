@@ -57,6 +57,10 @@ public class Cliente {
     public void setMensualidadPagada(boolean mensualidadPagada) {
         this.mensualidadPagada = mensualidadPagada;
     }
+
+    public int getMensualidad() {
+        return mensualidad;
+    }
     
     
 
